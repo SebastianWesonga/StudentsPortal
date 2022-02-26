@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .myDiv {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        form {
+            border: 3px solid #f1f1f1;
+            font-family: Arial;
+        }
+        
+        .container {
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+        
+        input[type=text],
+        input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+        
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+        }
+        
+        input[type=submit]:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#name">Name</a>
+        <a href="#Contact">Contact</a>
+        <a href="#About">About</a>
+        <div class="search-container ">
+            <form action="/action_page.php ">
+                <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="tabs">
+        <div class="tab-header ">
+            <div class="divNav ">
+                <div>
+                    <i class="fa fa-home"></i><button onclick="openTab(event, 'home') " class="tablinks">Home</button>
+                </div>
+                <div>
+                    <i class="fa fa-pencil-square-o"></i><button onclick="openTab(event, 'news')" class="tablinks">News and Events</button>
+                </div>
+                <div>
+                    <i class="fa fa-bar-chart"></i><button onclick="openTab(event, 'reporting')" class="tablinks">Reporting</button>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i><button onclick="openTab(event, 'fees')" class="tablinks">Fees</button>
+                </div>
+                <div>
+                    <i class="fa fa-globe "></i><button onclick="openTab(event, 'units') " class="tablinks ">Units</button>
+                </div>
+                <div>
+                    <i class="fa fa-pencil-square-o "></i><button onclick="openTab(event, 'exams') " class="tablinks ">Examinations</button>
+                </div>
+            </div>
+
+            <div class="tab-indicator "></div>
+            <div class="tab-body ">
+
+                <div id="Home" class="tabcontent">
+
+                    <h1>Welcome to the Students Portal</h1>
+
+                    <div class="myDiv">
+                        <h2>Latest news</h2>
+                        <h2>Current Registered Units</h2>
+                    </div>
+                    <br> latest news<br>Current Registered Units<br>Your fee balance ? </p>
+
+                </div>
+
+                <div class="tabcontent" id="news">
+                    <div class="topnav">
+                        <a class="active" href="#News and Events">News and Events</a>
+                    </div>
+                    <p>
+                        News <br> Events<br>
+                        <h3>News</h3>
+                        List of News<br> News Title <br> Category <br>Status</p>
+                    <h2>School Newsletter</h2>
+                    <form action="/action_page.php">
+                        <div class="container">
+                            <h2>Subscribe to our Newsletter</h2>
+                            <p>This is the text about why you should subscribe to our newsletter as a student.</p>
+                            <div class="container" style="background-color:white">
+                                <input type="text" placeholder="Name" name="name" required>
+                                <input type="text" placeholder="Email address" name="mail" required>
+                                <label>
+                                      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                                    </label>
+                                <div class="container">
+                                    <input type="submit" value="Subscribe">
+                                </div>
+                    </form>
+                    </div>
+
+                    </div>
+                </div>
+                <div class="tabcontent" id="reporting">
+                    <div class="topnav">
+                        <a class="active" href="#reporting">Reporting</a>
+                    </div>
+                    <p>
+                        My Reporting History <br>Report Now<br>
+                    </p>
+                </div>
+            </div>
+            <div class="tabcontent" id="fees">
+                <div class="topnav">
+                    <a class="active" href="#fees">Fees</a>
+                </div>
+                <p>
+                    Fee Statement<br> Fee Structure
+                </p>
+                <button class="btn" style="width:100%">
+                    <i class="fa fa-download"></i>Download</button></div>
+
+            <div class="tabcontent" id="units">
+                <div class="topnav"><a class="active" href="#Units">Units</a><a href="#Register Units">Register Units</a></div>
+                <p><br>Units History <br>Curriculum </p>
+            </div>
+
+            <div class="tabcontent" id="exams">
+                <div class="topnav"><a class="active" href="#Examinations">Examinations</a><a href="#Resuts slip">Results Slip</a></div>
+                <p><br>Exam card <br>Retake </p>
+                <h2>Results Slip</h2>
+                <style>
+                    table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                    }
+                    
+                    th,
+                    td {
+                        text-align: left;
+                        padding: 16px;
+                    }
+                    
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                </style>
+                <table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Points</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>Sebastian</td>
+                        <td>Wesonga</td>
+                        <td>60</td>
+                        <td>A</td>
+                    </tr>
+                </table>
+                <button class="btn" style="width:100%"><i class="fa fa-download"></i>Download</button></div>
+        </div>
+        <script async src="code.js "></script>
+</body>
+
+</html>
